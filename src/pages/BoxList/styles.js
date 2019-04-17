@@ -19,14 +19,6 @@ const styles = StyleSheet.create({
     color: "#333"
   },
 
-  buttonText: {
-    marginTop: 10,
-    textAlign: "left",
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333"
-  },
-
   list: {
     marginTop: 30
   },

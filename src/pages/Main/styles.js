@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
   logo: {
     alignSelf: "center",
     alignItems: "stretch",
-    paddingHorizontal: 30
+    paddingHorizontal: 30,
+    marginTop: 100
   },
 
   input: {

@@ -73,6 +73,11 @@ export default class Box extends Component {
     })
   };
 
+  onBackBox = async () => {
+    await AsyncStorage.removeItem("@RocketBox:box");
+    this.props.navigation.navigate("BoxList");
+  }
+
   renderItem = ({ item }) => (
     <TouchableOpacity onPress={() => this.openFile(item)} style={styles.file}>
       <View style={styles.fileInfo}>
@@ -93,6 +98,8 @@ export default class Box extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.boxTitle}>{this.state.box.title}</Text>
+
+        <Text style={styles.buttonText} onPress={this.onBackBox}>Voltar</Text>
 
         <FlatList
           style={styles.list}

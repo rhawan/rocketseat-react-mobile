@@ -5,11 +5,13 @@ import {
 
 import Main from "./pages/Main";
 import Box from "./pages/Box";
+import BoxList from "./pages/BoxList";
 
 const Routes = createAppContainer(
   createSwitchNavigator({
     Main,
-    Box
+    Box,
+    BoxList
   })
 );
 

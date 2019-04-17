@@ -6,7 +6,7 @@ import api from "../../services/api";
 
 import styles from "./styles";
 
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 
 export default class Main extends Component {
@@ -30,6 +30,10 @@ export default class Main extends Component {
     this.props.navigation.navigate("Box");
   };
 
+  handleNavigateBoxes = async () => {
+    this.props.navigation.navigate("BoxList");
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -48,6 +52,9 @@ export default class Main extends Component {
 
         <TouchableOpacity onPress={this.handleSignIn} style={styles.button}>
           <Text style={styles.buttonText}>Criar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.handleNavigateBoxes} style={styles.button}>
+          <Text style={styles.buttonText}>Escolher Box</Text>
         </TouchableOpacity>
       </View>
     );
